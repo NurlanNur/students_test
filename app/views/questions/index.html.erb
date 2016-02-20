@@ -2,9 +2,9 @@
 
 <h1>Questions for "<%= @test.name %>"</h1>
 
-<%= link_to '+ New question', new_test_question_path(@test) %>
+<%= link_to '+ New question', new_test_question_path(@test), class: 'btn btn-primary' %>
 
-<table>
+<table class="table table-striped table-bordered ">
   <tr>
     <th>Question</th>
     <th>Answers</th>

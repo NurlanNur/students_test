@@ -4,9 +4,9 @@
 <h5><%= @question.question %></h5>
 
 <p><strong>Answers:</strong></p>
-<%= link_to '+ New answer', new_test_question_answer_path(@test, @question) %>
+<%= link_to '+ New answer', new_test_question_answer_path(@test, @question), class: 'btn btn-primary' %>
 
-<table>
+<table class="table table-striped table-bordered ">
   <tr>
     <th></th>
     <th>Answers</th>
