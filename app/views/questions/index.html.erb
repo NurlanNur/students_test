@@ -12,6 +12,7 @@
   </tr>
 
   <% @questions.each do |question| %>
+
       <tr>
         <td><%= question.question %></td>
         <td><%= link_to 'Answers', test_question_answers_path(@test, question.id) %></td>
