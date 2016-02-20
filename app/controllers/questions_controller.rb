@@ -26,7 +26,7 @@ class QuestionsController < ApplicationController
     @test = Test.find(params[:test_id])
     @question = @test.questions.create(question_params)
     if @question.save
-      flash[:notice] = "Вопрос #{@question.title} успешно создан!"
+      flash[:notice] = "Вопрос #{@question.question} успешно создан!"
       redirect_to test_questions_path(@test)
     else
       render 'new'
@@ -56,7 +56,7 @@ class QuestionsController < ApplicationController
 
   private
   def question_params
-    params.require(:question).permit(:title, :id, :test_id)
+    params.require(:question).permit(:question, :id, :test_id)
   end
 
 end
