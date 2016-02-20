@@ -16,3 +16,20 @@ users = []
                          password: '12345678',
                          password_confirmation: '12345678')
 end
+
+tests = []
+
+10.times do
+  tests << Test.create(name: Faker::Lorem.sentence, description: Faker::Lorem.sentence)
+end
+
+questions = []
+
+10.times do
+  questions << Question.create(question: Faker::Lorem.sentence, test: tests.sample)
+end
+answers = []
+is_correct =[true, false]
+10.times do
+  answers << Answer.create(answer: Faker::Lorem.word, is_correct: is_correct.sample, question: questions.sample)
+end
