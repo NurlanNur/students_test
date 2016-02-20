@@ -1,3 +1,5 @@
+<h5><%= link_to 'Tests', tests_path %> > <%= @test.name %></h5>
+
 <h1>Questions for "<%= @test.name %>"</h1>
 
 <%= link_to '+ New question', new_test_question_path(@test) %>

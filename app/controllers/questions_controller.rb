@@ -1,10 +1,8 @@
 class QuestionsController < ApplicationController
 
   def index
-
     @test = Test.find(params[:test_id])
-    @questions = Question.where(test_id: @test.id)
-
+    @questions = @test.questions
   end
 
   # def show
