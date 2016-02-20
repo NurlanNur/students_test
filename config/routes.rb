@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :tests do
     resources :questions
+      resources :answers
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
