@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   root 'tests#index'
 
   resources :tests do
-    resources :questions
+    resources :questions do
       resources :answers
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,15 @@
+<%= form_for ([@test,@question, @answer]) do |f| %>
+    <p>
+      <%= f.label :Create_new_answer %><br>
+      <%= f.text_area :answer %>
+    </p>
+
+    <p>
+      <%= f.label :"Is correct?" %><br>
+      <%= f.check_box :is_correct %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
