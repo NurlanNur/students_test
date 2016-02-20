@@ -7,7 +7,6 @@ class QuestionsController < ApplicationController
 
   end
 
-
   # def show
   #   @test = Test.find(params[:test_id])
   #   @question = @test.questions(params[:id])
