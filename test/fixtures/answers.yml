@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  answer: MyText
+  is_correct: false
+  questions_id: 
+
+two:
+  answer: MyText
+  is_correct: false
+  questions_id: 
