@@ -13,9 +13,9 @@
 
   <% @tests.each do |test| %>
       <tr>
-        <td><%= test.name %></td>
+        <td><%= link_to "#{test.name}", test_questions_path(test) %></td>
         <td><%= link_to 'Copy link', test_path(test) %></td>
-        <td><%= link_to 'Questions #', '#' %></td>
+        <td><%= link_to "#{test.questions.count}", test_questions_path(test)  %></td>
         <td><%= link_to 'Results #', '#' %></td>
         <td><%= link_to 'Edit', edit_test_path(test) %></td>
         <td><%= link_to 'Remove', test_path(test),

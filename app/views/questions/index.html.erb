@@ -1,0 +1,22 @@
+<h1>Questions for "<%= @test.name %>"</h1>
+
+<%= link_to '+ New question', new_test_question_path(@test) %>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Answers</th>
+    <th colspan="2">Actions #</th>
+  </tr>
+
+  <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.title %></td>
+        <td><%= link_to 'Answers', '#' %></td>
+        <td><%= link_to 'Edit', edit_test_question_path(@test, question.id) %></td>
+        <td><%= link_to 'Remove', test_question_path(@test, question.id),
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+</table>
