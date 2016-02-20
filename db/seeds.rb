@@ -9,6 +9,7 @@
 User.create(name: 'admin', email: 'admin@example.com', password: '12345678',
                            password_confirmation: '12345678')
 users = []
+
 3.times do
   name = Faker::Name.name
   users.push User.create(name: name, email: Faker::Internet.email(name),
