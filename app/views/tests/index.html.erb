@@ -1,2 +1,26 @@
-<h1>Tests#index</h1>
-<p>Find me in app/views/tests/index.html.erb</p>
+<h1>Tests</h1>
+
+<%= link_to 'New test', new_test_path %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Link</th>
+    <th>Questions #</th>
+    <th>Results #</th>
+    <th colspan="2">Actions #</th>
+  </tr>
+
+  <% @tests.each do |test| %>
+      <tr>
+        <td><%= test.name %></td>
+        <td><%= link_to 'Copy link', test_path(test) %></td>
+        <td><%= link_to 'Questions #', '#' %></td>
+        <td><%= link_to 'Results #', '#' %></td>
+        <td><%= link_to 'Edit', edit_test_path(test) %></td>
+        <td><%= link_to 'Remove', test_path(test),
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+</table>

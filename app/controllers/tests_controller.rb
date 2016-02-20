@@ -1,4 +1,5 @@
 class TestsController < ApplicationController
+
   def index
     @tests = Test.all
   end
@@ -19,7 +20,7 @@ class TestsController < ApplicationController
     @test = Test.new(test_params)
 
     if @test.save
-      redirect_to @test
+      redirect_to tests_path
     else
       render 'new'
     end
