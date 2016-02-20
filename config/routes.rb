@@ -1,17 +1,6 @@
 Rails.application.routes.draw do
-  get 'tests/index'
-
-  get 'tests/show'
-
-  get 'tests/new'
-
-  get 'tests/edit'
-
-  get 'tests/create'
-
-  get 'tests/update'
-
-  get 'tests/destroy'
+  root 'tests#index'
+  resources :tests
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
